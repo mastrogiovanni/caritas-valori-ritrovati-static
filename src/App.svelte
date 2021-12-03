@@ -173,8 +173,8 @@
 </script>
 
 <div class="d-flex">
-    <div class="justify-content-start"><button on:click={prev}>&lt;</button></div>
-    <div class=""><button on:click={next}>></button></div>
+    <div class="justify-content-start"><button on:click={prev}>&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp;</button></div>
+    <div class=""><button on:click={next}>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;</button></div>
     <div class="flex-grow-1">
         <select
             bind:value={currentClass}
