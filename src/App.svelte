@@ -216,8 +216,7 @@
                             </div>
                         </li>
                         <li>Giacenza: {database[code]["Giacenza"]}</li>
-                        <li>PPC: {database[code]["PPC"]}</li>
-                        <li>Nè1R: {database[code]["Nè1R"]}</li>
+                        <li>Prezzo: {database[code]["PPC"]}</li>
                     </ul>
                 </div>
             </div>
