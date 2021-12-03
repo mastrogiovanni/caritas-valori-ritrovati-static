@@ -192,32 +192,24 @@
 
 <div class="row">
     {#each paginatedCodes as code (code)}
-        <div class="col">
+        <div class="col" style="border:solid 1px hsla(0, 95%, 35%, 1);">
+            <div class="row" style="padding: 20px;">
+                <span class="badge rounded-pill bg-success" on:click={() => {
+                    currentClass =
+                        database[code]["Classe Merc."];
+                }}>{database[code]["Classe Merc."]}</span>
+            </div>
             <div class="row">
                 <div class="col">
                     <div
                         class="thumb"
                         style={database[code].image ? "background-image: url('/imgs/" + database[code].image + "')" : ""}
-                        title="Portrait: 400x400"
-                    />
+                        />
                 </div>
                 <div class="col">
-                    <ul>
-                        <li>Code: {code}</li>
-                        <li>Descrizione: {database[code]["Descrizione"]}</li>
-                        <li style="color: red">
-                            Classe: <div
-                                on:click={() => {
-                                    currentClass =
-                                        database[code]["Classe Merc."];
-                                }}
-                            >
-                                {database[code]["Classe Merc."]}
-                            </div>
-                        </li>
-                        <li>Giacenza: {database[code]["Giacenza"]}</li>
-                        <li>Prezzo: {database[code]["PPC"]}</li>
-                    </ul>
+                    <p>{database[code]["Descrizione"]}</p>
+                    <p>{database[code]["PPC"]} &euro;</p>
+                    <p>{database[code]["Giacenza"]} rimanenti</p>
                 </div>
             </div>
         </div>
@@ -254,4 +246,6 @@
             max-width: none;
         }
     }
+
+   
 </style>
